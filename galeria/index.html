@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GALERIA</title>
+		<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+		<style>
+			#reticulaproyectos {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-gap: 20px;
+				width: 100%;
+			}
+
+		  .card {
+		    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		    transition: 0.3s;
+		    width: 40%;
+		    border-radius: 15px;
+		    width: 100%;
+		    /*grid-column: 1 / span 1;*/
+		  }
+
+		  .card .contenedorimagen {
+		  	background-image: url("https://www.denofgeek.com/wp-content/uploads/2020/07/Cyberpunk-2077-lore.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 15px 15px 0px 0px;
+			width:100%;
+			height:60%;
+			overflow: hidden;
+		  }
+
+		  .card .contenedorimagen img {
+		  	width: 100%;
+		  	height: 100%;
+		  	object-fit: cover;
+		  } 
+
+		  .card:hover {
+
+		    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+		  }
+
+		  img {
+		    border-radius: 15px 15px 0 0;
+		  }
+
+		  .container {
+		    padding: 2px 16px;
+		  }
+
+		  @media only screen and (max-width: 768px) {
+				#reticulaproyectos {
+					display: grid;
+					grid-template-columns: 1fr;
+					grid-gap: 20px;
+					width: 100%;
+				}
+		  }
+		  
+		</style>
+	</head>
+	<body>
+		<main>
+			<header>
+				<div id="logo"><a href="index.html">PORTAFOLIO</a></div>
+				<nav>
+					<div class="menup"><a href="acercademi.html">ACERCA DE MI</a></div>
+					<div class="menup"><a href="galeria.html">GALERÍA</a></div>
+					<div class="menup"><a href="contacto.html" >CONTACTO</a></div>
+				</nav>
+			</header>
+			<section style="grid-column: 1 / span 12;">
+				<h1>GALERIA</h1>
+				<div id="reticulaproyectos">
+
+					<div class="card">
+					  
+					  <div class="contenedorimagen" >
+					  	<img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" style="width:100%">
+					  </div>
+					  <div class="container">
+					    <h4><b>Jane Doe</b></h4> 
+					    <p>Interior Designer</p> 
+					  </div>
+					</div>
+
+					<div class="card">
+					  <!-- <img src="images/girl-5662898_640.jpg" alt="Avatar" style="width:100%"> -->
+					  <div class="contenedorimagen" ></div>
+					  <div class="container">
+					    <h4><b>Jane Doe</b></h4> 
+					    <p>Interior Designer</p> 
+					  </div>
+					</div>
+
+					<div class="card">
+					  <div class="contenedorimagen" >
+					  	<img src="https://cdn.pixabay.com/photo/2018/07/08/16/41/mallard-3524213_1280.jpg" alt="Avatar" >
+					  </div>
+					  <div class="container">
+					    <h4><b>Jane Doe</b></h4> 
+					    <p>Interior Designer</p> 
+					  </div>
+					</div>
+
+					<div class="card">
+					  <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" style="width:100%">
+					  <div class="container">
+					    <h4><b>Jane Doe</b></h4> 
+					    <p>Interior Designer</p> 
+					  </div>
+					</div>
+
+					<div class="card">
+					  <img src="../images/img_avatar3.png" alt="Avatar" style="width:100%">
+					  <div class="container">
+					    <h4><b>Jane Doe</b></h4> 
+					    <p>Interior Designer</p> 
+					  </div>
+					</div>
+
+					<div class="card">
+					  <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" style="width:100%">
+					  <div class="container">
+					    <h4><b>Jane Doe</b></h4> 
+					    <p>Interior Designer</p> 
+					  </div>
+					</div>
+
+				</div>
+				<!-- <h1 style="font-size: 200px;color: red;">CONTACTO</h1> -->
+			</section>
+			<footer>EMAIL:iabreu@centro.edu.mx</footer>
+		</main>
+
+		
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PORTAFOLIO</title>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<div id="logo" onclick="cambiarColor()">PORTAFOLIO</div>
+				<nav>
+					<div class="menup"><a href="acercademi.html" >ACERCA DE MI</a></div>
+					<div class="menup"><a href="galeria.html" >GALERÍA</a></div>
+					<div class="menup" id="contacto"><a href="contacto.html" >CONTACTO</a></div>
+				</nav>
+			</header>
+			<section id="fotoportada">
+				<div id="animacioninteractiva"></div>				
+			</section>
+			<footer>EMAIL:iabreu@centro.edu.mx</footer>
+		</main>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+		
+		<script>
+			// selectores css
+			// nav, nombre de la etiqueta
+			// #logo , nombree de id, id son UNICOS
+			// .menup, nombre de la clase, seleccionar grupi de cosas
+			
+			// $("#fotoportada").delay(2000).fadeOut(5000).delay(5000).fadeIn(3000);
+
+
+			// $("#logo").text("PROYECTO 3D MEDIOS DIGITALES")
+
+			// $("#contacto").hide();
+			var r=0,g=0,b=0;
+
+			let ArcosAnimados = function(p) {
+				var angrot = 0;
+				var parametros = []
+
+
+				p.setup = function(){
+				  r = p.random(255);
+				  g = p.random(255);
+				  b = p.random(255);
+				  
+				  
+				  let anchoContenedor = $("#fotoportada").width();
+				  //alert(anchoContenedor);
+				  p.createCanvas(anchoContenedor, 500);
+				  p.angleMode(p.DEGREES);
+				  p.background(r,g,b);
+
+				  var t = 20;
+				  for(var i=0; i<t; i++) {
+				  	parametros[i] = {
+				  		"radio": p.map(i,0, t, 80, anchoContenedor+100),
+				  		"angDesde": p.random(0, 640),
+				  		"angHasta": p.random(0, 640),
+				  		"angVel": p.random(0.05,8)
+				  	}
+				  }
+				}
+
+				p.draw = function() {
+				  p.background(r,g,b,40);
+				  //p.translate(p.mouseX, p.mouseY);
+				  p.translate(p.width*0.5, p.height*0.5);
+				  //angrot += 2;
+				  //p.rotate(angrot)
+				  p.strokeWeight(10);
+				  p.stroke(255);
+				  p.noFill();
+				  parametros.map(v => {
+					p.arc(0,0,v.radio,v.radio,v.angDesde+=v.angVel,v.angHasta+=v.angVel);
+				  })
+				  // p.arc(0,0,200,200,0,90);
+				  // p.arc(0,0,240,240,45,180);
+				  // p.arc(0,0,280,280,270,90);
+				  // p.arc(0,0,320,320,95,180);
+				  // p.arc(0,0,360,360,180,360);
+				}
+			}
+
+			var anim = new p5(ArcosAnimados, 'animacioninteractiva');
+
+			function cambiarColor() {
+				r = 255;
+				g = 0;
+				b = 0;
+			}
+
+		</script>
+		
+		
+
+	</body>
+</html>

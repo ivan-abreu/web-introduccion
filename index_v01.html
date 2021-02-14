@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PORTAFOLIO</title>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<div id="logo">PORTAFOLIO</div>
+				<nav>
+					<div class="menup"><a href="acercademi.html" >ACERCA DE MI</a></div>
+					<div class="menup"><a href="galeria.html" >GALERÍA</a></div>
+					<div class="menup" id="contacto"><a href="contacto.html" >CONTACTO</a></div>
+				</nav>
+			</header>
+			<section id="fotoportada">
+				<img src="https://cdn.pixabay.com/photo/2013/03/02/02/41/alley-89197_1280.jpg">
+			</section>
+			<section id="foto2"></section>
+			<footer>EMAIL:iabreu@centro.edu.mx</footer>
+		</main>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+		
+		<script>
+			// selectores css
+			// nav, nombre de la etiqueta
+			// #logo , nombree de id, id son UNICOS
+			// .menup, nombre de la clase, seleccionar grupi de cosas
+
+			// jquery
+			//$(document).ready({
+				// $("body").css("background-color", "red");
+				// $("main").animate({
+				// 	"background-color": "red"
+				// },5000);
+
+				// .animate({height: "100px"});
+			//})
+			
+			$("#fotoportada").delay(2000).fadeOut(5000).delay(5000).fadeIn(3000);
+
+
+			$("#logo").text("PROYECTO 3D MEDIOS DIGITALES")
+
+			$("#contacto").hide();
+
+
+		</script>
+		
+		
+
+	</body>
+</html>
